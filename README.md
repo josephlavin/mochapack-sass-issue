@@ -1,7 +1,7 @@
 # mochapack-sass-issue
 
 
-A basic laravel-mix powered JS demo app which replicates a SASS `@use` / `@import` issue.
+A basic laravel-mix powered Vue JS demo app which replicates a SASS `@use` / `@import` issue.
 
 node version v14.16.1
 npm version 6.14.12
