@@ -1,0 +1,1 @@
+# mochapack-sass-issue
