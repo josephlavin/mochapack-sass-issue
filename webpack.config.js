@@ -1,5 +1,6 @@
 const nodeExternals = require('webpack-node-externals');
 const { VueLoaderPlugin } = require('vue-loader');
+const path = require('path');
 
 module.exports = {
     mode: 'development',
@@ -25,22 +26,9 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    {
-                        loader: 'vue-style-loader',
-                        options: {
-                            sourceMap: true,
-                            sourceMapContents: false
-                        }
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true,
-                            sourceMapContents: false
-                        }
-                    },
-                    'resolve-url-loader',
-                    'sass-loader',
+                    'vue-style-loader',
+                    'css-loader',
+                    'sass-loader'
                 ]
             }
         ]
@@ -50,5 +38,10 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
-    ]
+    ],
+    entry: './src/app.js',
+    output: {
+        filename: 'app.js',
+        path: path.resolve(__dirname, 'dist')
+    }
 };
