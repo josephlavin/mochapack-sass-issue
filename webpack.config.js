@@ -4,7 +4,8 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    target: 'node', // webpack should compile node compatible code
+    target: 'node',
+    externalsPresets: { node: true }, // in order to ignore built-in modules like path, fs, etc.
     externals: [nodeExternals()], // in order to ignore all modules in node_modules folder
     module: {
         rules: [
