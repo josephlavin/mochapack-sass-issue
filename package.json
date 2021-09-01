@@ -18,7 +18,7 @@
     "webpack-node-externals": "^3.0.0"
   },
   "scripts": {
-    "test": "mochapack --webpack-config=webpack.config.js --require=src/setup.js src/**/*.spec.js"
+    "test": "mochapack --webpack-config=webpack.config.js --include=src/setup.js src/**/*.spec.js"
   },
   "repository": {
     "type": "git",
